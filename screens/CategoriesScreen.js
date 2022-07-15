@@ -9,6 +9,7 @@ function renderCategoryItem(itemData) {
     return <CategoryGridTitle title={itemData.item.title} color={itemData.item.color}></CategoryGridTitle>;
 }
 
+const numberOfColumns = 2;
 
 const CategoriesScreen = (props) => {
     return (
@@ -16,6 +17,7 @@ const CategoriesScreen = (props) => {
             data={CATEGORIES} 
             keyExtractor={(item) => item.id}
             renderItem={renderCategoryItem}
+            numColumns={numberOfColumns}
             />
     );
 }
